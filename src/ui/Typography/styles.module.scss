@@ -1,0 +1,49 @@
+// Extends
+// ==============================
+.header-basic {
+  letter-spacing: 0.005em;
+  text-align: left;
+}
+
+.paragraph-basic {
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+
+@for $i from 1 through 6 {
+  .header-h#{$i}-primary {
+    @extend .header-basic;
+    color: var(--black);
+  }
+  .header-h#{$i}-secondary {
+    @extend .header-basic;
+    color: var(--green-three);
+  }
+  .header-h#{$i}-tertiary {
+    @extend .header-basic;
+    color: var(--yelow-one);
+  }
+  .header-h#{$i}-error {
+    @extend .header-basic;
+    color: var(--red-six);
+  }
+}
+
+.paragraph {
+  &-primary {
+    @extend .paragraph-basic;
+    color: var(--black);
+  }
+  &-secondary {
+    @extend .paragraph-basic;
+    color: var(--green-three);
+  }
+  &-tertiary {
+    @extend .paragraph-basic;
+    color: var(--yelow-one);
+  }
+  &-error {
+    @extend .paragraph-basic;
+    color: var(--red-six);
+  }
+}

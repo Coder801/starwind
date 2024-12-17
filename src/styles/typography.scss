@@ -1,0 +1,29 @@
+/* ===========================
+Typography
+=========================== */
+html {
+  font-size: 18px;
+  font-family: var(--fontRoboto);
+}
+input,
+select,
+textarea {
+  font-family: var(--fontRoboto);
+}
+
+/* All heading */
+:--heading {
+  font-family: var(--fontRoboto);
+}
+p {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+strong {
+  font-weight: 900;
+}
