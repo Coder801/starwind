@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById("pluginA-root"));
+const root = ReactDOM.createRoot(document.getElementById("pluginC-root"));
 root.render(
   <React.StrictMode>
     <App />

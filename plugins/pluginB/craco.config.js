@@ -2,33 +2,33 @@ const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
   devServer: {
-    port: 3001,
+    port: 3002,
     open: false,
   },
   webpack: {
     plugins: {
       add: [
         new ModuleFederationPlugin({
-          name: "pluginA",
+          name: "pluginB",
           filename: "remoteEntry.js",
-          library: { type: "var", name: "pluginA" },
+          library: { type: "var", name: "pluginB" },
           exposes: {
-            "./App": "./src/App.js",
+            "./App": "./src/App",
           },
           shared: {
             react: {
               singleton: true,
-              requiredVersion: "^19.0.0",
+              requiredVersion: "^17.0.2",
               eager: false,
             },
             "react-dom": {
               singleton: true,
-              requiredVersion: "^19.0.0",
+              requiredVersion: "^17.0.2",
               eager: false,
             },
             "react-dom/client": {
               singleton: false,
-              requiredVersion: "^19.0.0",
+              requiredVersion: "^17.0.2",
               eager: false,
             },
           },

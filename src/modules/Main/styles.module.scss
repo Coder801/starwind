@@ -1,12 +1,16 @@
+@value gap: 10px;
+
 .container {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: calc(gap * 2);
 }
 
 .item {
-  width: 50%;
+  width: calc(50% - gap);
   height: 50%;
   overflow: hidden;
   padding: 10px;

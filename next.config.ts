@@ -11,20 +11,25 @@ const nextConfig: NextConfig = {
   },
   webpack(config) {
     config.resolve.fallback = { fs: false };
-
     config.plugins.push(
       new ModuleFederationPlugin({
         name: "host",
         remotes: {
-          pluginA: "pluginA@http://localhost:3003/remoteEntry.js",
+          pluginA: "pluginA@http://localhost:3001/remoteEntry.js",
+          pluginB: "pluginB@http://localhost:3002/remoteEntry.js",
+          pluginC: "pluginC@http://localhost:3003/remoteEntry.js",
         },
         shared: {
-          react: { singleton: true, eager: true },
-          "react-dom": { singleton: true, eager: true },
-          "react-dom/client": {
-            eager: true,
+          react: { singleton: true, requiredVersion: "^19.0.0", eager: true },
+          "react-dom": {
             singleton: true,
-            requiredVersion: dependencies["react-dom"],
+            requiredVersion: "^19.0.0",
+            eager: true,
+          },
+          "react-dom/client": {
+            requiredVersion: "^19.0.0",
+            singleton: true,
+            eager: true,
           },
         },
       })
