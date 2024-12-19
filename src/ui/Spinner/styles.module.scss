@@ -1,0 +1,8 @@
+.spinner {
+  border: 10px solid var(--white-one);
+  border-top: 10px solid var(--background-three);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}

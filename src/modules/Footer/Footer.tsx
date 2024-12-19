@@ -9,8 +9,8 @@ type FooterProps = {
 
 export const Footer: FC<FooterProps> = ({ className }) => {
   return (
-    <footer className={clsx(className, styles.container)}>
+    <div className={clsx(className, styles.container)}>
       Some footer information =)
-    </footer>
+    </div>
   );
 };

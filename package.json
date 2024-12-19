@@ -30,7 +30,7 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.4",
     "lerna": "^8.1.9",
-    "typescript": "^5",
+    "typescript": "^5.7.2",
     "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4",
     "webpack-dashboard": "^3.3.8"
