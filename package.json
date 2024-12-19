@@ -16,6 +16,7 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "kill-port": "^2.0.1",
+    "lodash": "^4.17.21",
     "next": "15.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -23,6 +24,7 @@
     "use-context-selector": "^2.0.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -34,5 +36,12 @@
     "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4",
     "webpack-dashboard": "^3.3.8"
-  }
+  },
+  "browserslist": [
+    "chrome 64",
+    "edge 79",
+    "firefox 67",
+    "opera 51",
+    "safari 12"
+  ]
 }

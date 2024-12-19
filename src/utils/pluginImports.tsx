@@ -8,17 +8,17 @@ export enum PluginNames {
   pluginC = "pluginC",
 }
 
-export const getPlugin = (plugin: PluginNames, Spinner: FC) => {
+export const getImports = (plugin: PluginNames, Spinner: FC) => {
   const plugins = {
-    pluginA: dynamic(() => import("pluginA/App"), {
+    pluginA: dynamic(() => import(`${PluginNames.pluginA}/App`), {
       ssr: false,
       loading: () => <Spinner />,
     }),
-    pluginB: dynamic(() => import("pluginB/App"), {
+    pluginB: dynamic(() => import(`${PluginNames.pluginB}/App`), {
       ssr: false,
       loading: () => <Spinner />,
     }),
-    pluginC: dynamic(() => import("pluginC/App"), {
+    pluginC: dynamic(() => import(`${PluginNames.pluginC}/App`), {
       ssr: false,
       loading: () => <Spinner />,
     }),

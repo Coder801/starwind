@@ -7,9 +7,10 @@ import styles from "./styles.module.scss";
 
 import { useAppContext } from "@/context/AppContext";
 
-import { getPlugin, PluginNames } from "@/utils/pluginImports";
+import { getImports, PluginNames } from "@/utils/pluginImports";
 
 import { Spinner } from "@/ui/Spinner";
+import { Typography } from "@/ui/Typography";
 
 type MainProps = {
   className?: string;
@@ -20,10 +21,15 @@ export const Main: FC<MainProps> = ({ className }) => {
   const { state }: any = useAppContext(); // eslint-disable-line
   const { plugins } = state?.data || {};
 
+  console.log(plugins);
+
   useEffect(() => {
     const loadComponents = () => {
-      const result = plugins.map(({ name }: { name: PluginNames }) =>
-        getPlugin(name, Spinner)
+      const result = plugins.map(
+        ({ name, framework }: { name: PluginNames; framework: string }) => ({
+          framework,
+          Component: getImports(name, Spinner),
+        })
       );
 
       setLoadedComponents(result);
@@ -37,9 +43,12 @@ export const Main: FC<MainProps> = ({ className }) => {
   return (
     <main className={clsx(className, styles.container)}>
       <div className={styles.items}>
-        {loadedComponents.map((Component: FC, index: number) => (
+        {loadedComponents.map(({ framework, Component }, index: number) => (
           <div key={index} className={styles.item}>
-            <Component />
+            <Typography>{framework}</Typography>
+            <div className={styles.frame}>
+              <Component />
+            </div>
           </div>
         ))}
       </div>
