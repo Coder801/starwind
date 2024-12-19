@@ -1,0 +1,9 @@
+[submodule "plugins/starwind-plugin-a"]
+	path = plugins/starwind-plugin-a
+	url = git@github.com:Coder801/starwind-plugin-a.git
+[submodule "plugins/starwind-plugin-b"]
+	path = plugins/starwind-plugin-b
+	url = git@github.com:Coder801/starwind-plugin-b.git
+[submodule "plugins/starwind-plugin-c"]
+	path = plugins/starwind-plugin-c
+	url = git@github.com:Coder801/starwind-plugin-c.git

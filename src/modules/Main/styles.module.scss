@@ -26,15 +26,10 @@
     border-radius: 4px;
     background-color: var(--background-three);
 
-    & .frame {
+    & .frame,
+    & .frame > * {
       width: 100%;
       height: 100%;
-      border: 1px solid var(--gray-one);
-
-      & > * {
-        width: 100%;
-        height: 100%;
-      }
     }
   }
 }
