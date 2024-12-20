@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { dependencies } from "./package.json" assert { type: "json" };
 
 import { container } from "webpack";
 
@@ -15,9 +14,12 @@ const nextConfig: NextConfig = {
       new ModuleFederationPlugin({
         name: "host",
         remotes: {
-          pluginA: "pluginA@http://localhost:3001/remoteEntry.js",
-          pluginB: "pluginB@http://localhost:3002/remoteEntry.js",
-          pluginC: "pluginC@http://localhost:3003/remoteEntry.js",
+          starwindPluginA:
+            "starwindPluginA@http://localhost:3001/remoteEntry.js",
+          starwindPluginB:
+            "starwindPluginB@http://localhost:3002/remoteEntry.js",
+          starwindPluginC:
+            "starwindPluginC@http://localhost:3003/remoteEntry.js",
         },
         shared: {
           react: { singleton: true, requiredVersion: "^19.0.0", eager: true },

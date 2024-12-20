@@ -8,6 +8,7 @@ import styles from "./styles.module.scss";
 import { useAppContext } from "@/context/AppContext";
 
 import { getImports, PluginNames } from "@/utils/pluginImports";
+import { camelCase } from "lodash";
 
 import { Spinner } from "@/ui/Spinner";
 import { Typography } from "@/ui/Typography";
@@ -28,7 +29,7 @@ export const Main: FC<MainProps> = ({ className }) => {
       const result = plugins.map(
         ({ name, framework }: { name: PluginNames; framework: string }) => ({
           framework,
-          Component: getImports(name, Spinner),
+          Component: getImports(camelCase(name), Spinner),
         })
       );
 
