@@ -1,0 +1,10 @@
+{
+  "name": "starwind-example",
+  "plugins": [
+    {
+      "name": "starwindPluginA",
+      "template": "react",
+      "port": "3005"
+    }
+  ]
+}

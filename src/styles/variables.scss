@@ -1,0 +1,26 @@
+:root {
+  // Backgrounds
+  --background-one: #0d1212;
+  --background-two: #121a1c;
+  --background-three: #1b263b;
+
+  // Color
+  --primary-one: #e9ecec;
+  --primary-two: #f1f5f5;
+
+  --white-one: #e0e1dd;
+  --white-two: #f1f5f5;
+
+  --gray-one: #404b53;
+  --gray-two: #282c34;
+
+  //Fonts
+  --fontArial: "Arial, sans-serif";
+  --fontRoboto: "Roboto", sans-serif;
+}
+
+//Media Queries
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+$xlarge-screen: 1440px;

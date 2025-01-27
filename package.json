@@ -1,0 +1,49 @@
+{
+  "name": "starwind-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:plugins": "lerna run start --stream",
+    "dev:root": "next dev -p 3000",
+    "dev": "npm run dev:root & npm run dev:plugins",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "kill": "kill-port --port 3000,3001,3002,3003",
+    "clean": "rm -rf .next && rm -rf node_modules && rm package-lock.json"
+  },
+  "dependencies": {
+    "@craco/craco": "^7.1.0",
+    "clsx": "^2.1.1",
+    "craco": "^0.0.3",
+    "kill-port": "^2.0.1",
+    "lodash": "^4.17.21",
+    "next": "15.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rimraf": "^6.0.1",
+    "sass": "^1.83.0",
+    "usehooks-ts": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "encoding": "^0.1.13",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.4",
+    "lerna": "^8.1.9",
+    "typescript": "^5.7.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dashboard": "^3.3.8"
+  },
+  "browserslist": [
+    "chrome 64",
+    "edge 79",
+    "firefox 67",
+    "opera 51",
+    "safari 12"
+  ]
+}
