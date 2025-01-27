@@ -12,6 +12,11 @@
     "kill": "kill-port --port 3000,3001,3002,3003",
     "clean": "rm -rf .next && rm -rf node_modules && rm package-lock.json"
   },
+  "workspaces": {
+    "packages": [
+      "plugins/*"
+    ]
+  },
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "clsx": "^2.1.1",
