@@ -34,12 +34,12 @@ export const Main: FC<MainProps> = ({ className }) => {
   // });
 
   const handleCalculate = async () => {
-    const { inject: inject1 } = await import("starwindPluginA/injector");
+    // const { inject: inject1 } = await import("starwindPluginA/injector");
     // const { inject: inject2 } = await import("starwindPluginB/appInjector");
     // const { inject: inject3 } = await import("starwindPluginC/appInjector");
     // inject1(parentElementId1);
     // inject2(parentElementId2);
-    inject1(parentElementId1);
+    // inject1(parentElementId1);
   };
 
   useEffect(() => {
